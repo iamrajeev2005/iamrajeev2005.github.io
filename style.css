@@ -1,0 +1,720 @@
+@font-face {
+  font-family: Nu;
+  src: url(./assets/NeueMontreal-Regular.otf);
+}
+:root {
+  --primary-color: #fff;
+  --secondary-color: #000;
+}
+::selection {
+  background: none;
+  color: #dd4b39;
+}
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Gilroy";
+  cursor: none;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.main {
+  position: relative;
+  overflow-x: hidden;
+}
+.cursor {
+  height: 20px;
+  width: 20px;
+  background-color: var(--primary-color);
+  position: fixed;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  transition: all ease 0.1s;
+  z-index: 6;
+  pointer-events: none;
+}
+nav {
+  position: fixed;
+  height: 45px;
+  left: 50%;
+  top: 5%;
+  transform: translateX(-50%);
+  width: 550px;
+  border-radius: 100px;
+  background-color: var(--primary-color);
+  box-shadow: 0px 1px 10px black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 25px;
+  z-index: 7;
+}
+nav a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: 1.4vw;
+  font-weight: bold;
+}
+
+nav .cv {
+  cursor: pointer;
+  font-size: 1vw;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 12px;
+  border-radius: 100px;
+  border: 0;
+  outline: 0;
+  margin-right: -20px;
+  font-weight: lighter;
+  transition: background 0.6s ease-out;
+}
+nav .cv:hover {
+  background: linear-gradient(
+    to right,
+    rgb(184, 21, 184),
+    rgb(16, 113, 204),
+    rgb(15, 236, 163)
+  );
+}
+
+.social {
+  position: fixed;
+  z-index: 7;
+}
+.social .linkedin {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: fixed;
+  top: 40.2%;
+  height: 40px;
+  width: 40px;
+  background: #007bb5;
+  transition: width 0.4s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--primary-color);
+}
+.social .linkedin i {
+  font-size: 1.4em;
+  padding-left: 8px;
+}
+.social .linkedin a {
+  text-decoration: underline;
+  color: var(--primary-color);
+  margin-left: 11px;
+  visibility: hidden;
+}
+.social .linkedin:hover {
+  cursor: pointer;
+  width: 200px;
+}
+.social .linkedin:hover a {
+  visibility: visible;
+  transition: all ease-in 0.8s;
+}
+.social .twitter {
+  position: fixed;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  top: 46.5%;
+  height: 40px;
+  width: 40px;
+  background: #55acee;
+  transition: width 0.4s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--primary-color);
+}
+.social .twitter i {
+  font-size: 1.4em;
+  padding-left: 8px;
+}
+.social .twitter a {
+  text-decoration: underline;
+  color: var(--primary-color);
+  margin-left: 11px;
+  visibility: hidden;
+}
+.social .twitter:hover {
+  cursor: pointer;
+  width: 180px;
+}
+.social .twitter:hover a {
+  visibility: visible;
+  transition: all ease-in 0.8s;
+}
+.social .github {
+  position: fixed;
+  top: 52.8%;
+  height: 40px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 40px;
+  background-color: green;
+  transition: width 0.4s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--primary-color);
+}
+.social .github i {
+  font-size: 1.4em;
+  padding-left: 8px;
+}
+.social .github a {
+  text-decoration: underline;
+  color: var(--primary-color);
+  margin-left: 11px;
+  visibility: hidden;
+}
+.social .github:hover {
+  cursor: pointer;
+  width: 180px;
+}
+.social .github:hover a {
+  visibility: visible;
+  transition: all ease-in 0.8s;
+}
+.social .gmail {
+  position: fixed;
+  top: 59%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 40px;
+  width: 40px;
+  background: #dd4b39;
+  transition: width 0.4s ease-out;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.social .gmail i {
+  font-size: 1.4em;
+  padding-left: 8px;
+}
+.social .gmail a {
+  text-decoration: underline;
+  color: var(--primary-color);
+  margin-left: 11px;
+  visibility: hidden;
+}
+.social .gmail:hover {
+  cursor: pointer;
+  width: 220px;
+}
+.social .gmail:hover a {
+  visibility: visible;
+  transition: all ease-in 0.4s;
+}
+.hero {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+.hero .video {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+.hero .video video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.profile {
+  height: 35px;
+  width: fit-content;
+  padding: 0px 10px;
+  position: absolute;
+  z-index: 2;
+  border-radius: 100px;
+  top: 14%;
+  left: 31%;
+  transform: translateX(-31%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile span {
+  background: linear-gradient(
+    to right,
+    rgb(184, 21, 184),
+    rgb(16, 113, 204),
+    rgb(15, 236, 163)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 2rem;
+  font-weight: bolder;
+  display: inline-block;
+}
+
+.hero .one {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 10vw;
+  line-height: 1;
+}
+.hero span {
+  height: 50px;
+  width: 50px;
+  background-color: var(--primary-color);
+  border-radius: 100px;
+  margin: 20px;
+  background: linear-gradient(
+    to right,
+    rgb(184, 21, 184),
+    rgb(16, 113, 204),
+    rgb(15, 236, 163)
+  );
+  box-shadow: 1px 1px 40px 10px rgb(209, 61, 209);
+  animation: rotate 1.5s infinite linear;
+  transition: scale 0.2s ease-in-out, transform 0.4s ease;
+}
+
+@keyframes rotate {
+  0%,
+  25% {
+    transform: scale(0.5);
+  }
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100%,
+  0% {
+    transform: scale(1);
+  }
+}
+.hero h4 {
+  bottom: 5%;
+  position: absolute;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 100px;
+  font-size: 2vw;
+  padding: 2px 20px;
+  animation: lift 3s infinite linear;
+  z-index: 5;
+}
+@keyframes lift {
+  0%,
+  25% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  75% {
+    transform: translateY(-50%);
+  }
+  100%,
+  0% {
+    transform: translateY(50%);
+  }
+}
+.about {
+  border-top: 1px solid #fff;
+  min-height: 130vh;
+  width: 100vw;
+  background-color: var(--primary-color);
+}
+.about .upper-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0vw 5vw;
+  margin-top: 3.5vw;
+}
+.about .upper-text h4 {
+  font-size: 2vw;
+  font-family: Nu;
+  font-weight: normal;
+}
+.about .border-div {
+  height: 2px;
+  width: 90.5%;
+  background-color: #000;
+  margin: 5px auto;
+}
+.about p {
+  width: 88%;
+  margin: 3vw auto;
+  font-size: 3vw;
+  font-family: Nu;
+  line-height: 1.3;
+}
+
+.about p .line {
+  display: inline-block;
+  height: 3px;
+  width: 100px;
+  background-color: #000;
+  margin: 0.8vw 0.5vw;
+}
+.about-text {
+  padding-bottom: 2vw;
+}
+.about p .para-bg {
+  height: 55px;
+  width: 220px;
+  background: url("./assets/para-bg.gif");
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  border-radius: 100px;
+  margin: -0.7vw 1vw;
+}
+.about .heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  margin-bottom: 3vw;
+}
+.about .heading img {
+  animation: star 2s linear infinite;
+}
+@keyframes star {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.about .heading h1 {
+  font-size: 4vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.about .heading h1::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #000;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform ease-in-out 0.4s;
+}
+.about .heading h1:hover::after {
+  transform-origin: bottom left;
+  transform: scalex(1);
+}
+.about .skills-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+.about .skills {
+  height: 6vw;
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3vw;
+}
+.about .skills img {
+  height: 100px;
+  padding-top: 0.5vw;
+}
+.about .skills .html {
+  position: relative;
+}
+.about .skills .tooltip {
+  text-align: center;
+  padding-top: 0.2vw;
+}
+.about .skills .tooltip h3 {
+  font-family: Nu;
+  font-size: 1.2vw;
+}
+.about .skills .html .tooltip {
+  position: absolute;
+  top: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(146, 136, 136, 0.384);
+  height: 2vw;
+  width: 6vw;
+  border-radius: 10px;
+  visibility: hidden;
+}
+.about .skills .html:hover .tooltip {
+  visibility: visible;
+}
+.about .skills .html .tooltip::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid rgba(146, 136, 136, 0.384);
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+  bottom: -70%;
+  left: 38%;
+}
+.about .skills .css {
+  position: relative;
+}
+.about .skills .css .tooltip {
+  position: absolute;
+  top: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(146, 136, 136, 0.384);
+  height: 2vw;
+  width: 6vw;
+  border-radius: 10px;
+  visibility: hidden;
+}
+.about .skills .css:hover .tooltip {
+  visibility: visible;
+}
+.about .skills .css .tooltip::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid rgba(146, 136, 136, 0.384);
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+  bottom: -70%;
+  left: 38%;
+}
+.about .skills .js {
+  position: relative;
+}
+.about .skills .js .tooltip {
+  position: absolute;
+  top: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(146, 136, 136, 0.384);
+  height: 2vw;
+  min-width: 6vw;
+  border-radius: 10px;
+  visibility: hidden;
+}
+.about .skills .js:hover .tooltip {
+  visibility: visible;
+}
+.about .skills .js .tooltip::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid rgba(146, 136, 136, 0.384);
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+  bottom: -70%;
+  left: 38%;
+}
+.about .skills .tailwind {
+  position: relative;
+}
+.about .skills .tailwind .tooltip {
+  position: absolute;
+  top: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(146, 136, 136, 0.384);
+  height: 2vw;
+  min-width: 8vw;
+  border-radius: 10px;
+  visibility: hidden;
+}
+.about .skills .tailwind:hover .tooltip {
+  visibility: visible;
+}
+.about .skills .tailwind .tooltip::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid rgba(146, 136, 136, 0.384);
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+  bottom: -70%;
+  left: 38%;
+}
+.about .skills .react {
+  position: relative;
+}
+.about .skills .react .tooltip {
+  position: absolute;
+  top: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(146, 136, 136, 0.384);
+  height: 2vw;
+  width: 6vw;
+  border-radius: 10px;
+  visibility: hidden;
+}
+.about .skills .react:hover .tooltip {
+  visibility: visible;
+}
+.about .skills .react .tooltip::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid rgba(146, 136, 136, 0.384);
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+  bottom: -70%;
+  left: 38%;
+}
+.about .skills .redux {
+  position: relative;
+}
+.about .skills .redux .tooltip {
+  position: absolute;
+  top: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(146, 136, 136, 0.384);
+  height: 2vw;
+  width: 6vw;
+  border-radius: 10px;
+  visibility: hidden;
+}
+.about .skills .redux:hover .tooltip {
+  visibility: visible;
+}
+.about .skills .redux .tooltip::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid rgba(146, 136, 136, 0.384);
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+  bottom: -70%;
+  left: 38%;
+}
+.about .skills .next {
+  position: relative;
+}
+.about .skills .next .tooltip {
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(146, 136, 136, 0.384);
+  height: 2vw;
+  width: 6vw;
+  border-radius: 10px;
+  visibility: hidden;
+}
+.about .skills .next:hover .tooltip {
+  visibility: visible;
+}
+.about .skills .next .tooltip::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid rgba(146, 136, 136, 0.384);
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+  bottom: -70%;
+  left: 38%;
+}
+.about .skills .gsap {
+  position: relative;
+}
+.about .skills .gsap .tooltip {
+  position: absolute;
+  top: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(146, 136, 136, 0.384);
+  height: 2vw;
+  width: 6vw;
+  border-radius: 10px;
+  visibility: hidden;
+}
+.about .skills .gsap:hover .tooltip {
+  visibility: visible;
+}
+.about .skills .gsap .tooltip::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid rgba(146, 136, 136, 0.384);
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+  bottom: -70%;
+  left: 38%;
+}
+.about .skills .git {
+  position: relative;
+}
+.about .skills .git .tooltip {
+  position: absolute;
+  top: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(146, 136, 136, 0.384);
+  height: 2vw;
+  min-width: 8vw;
+  border-radius: 10px;
+  visibility: hidden;
+}
+.about .skills .git:hover .tooltip {
+  visibility: visible;
+}
+.about .skills .git .tooltip::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid rgba(146, 136, 136, 0.384);
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+  bottom: -70%;
+  left: 38%;
+}
