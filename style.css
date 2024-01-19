@@ -40,11 +40,11 @@ body {
 }
 nav {
   position: fixed;
-  height: 45px;
+  height: 3.5vw;
   left: 50%;
   top: 5%;
   transform: translateX(-50%);
-  width: 550px;
+  width: 40vw;
   border-radius: 100px;
   background-color: var(--primary-color);
   box-shadow: 0px 1px 10px black;
@@ -66,7 +66,7 @@ nav .cv {
   font-size: 1vw;
   background-color: var(--secondary-color);
   color: var(--primary-color);
-  padding: 12px;
+  padding: 1vw;
   border-radius: 100px;
   border: 0;
   outline: 0;
@@ -84,14 +84,14 @@ nav .cv:hover {
 }
 
 .social {
-  position: fixed;
+  position: absolute;
   z-index: 7;
 }
 .social .linkedin {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   position: fixed;
-  top: 40.2%;
+  top: 40vh;
   height: 40px;
   width: 40px;
   background: #007bb5;
@@ -123,7 +123,7 @@ nav .cv:hover {
   position: fixed;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  top: 46.5%;
+  top: 46vh;
   height: 40px;
   width: 40px;
   background: #55acee;
@@ -153,7 +153,7 @@ nav .cv:hover {
 }
 .social .github {
   position: fixed;
-  top: 52.8%;
+  top: 52.2vh;
   height: 40px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -185,7 +185,7 @@ nav .cv:hover {
 }
 .social .gmail {
   position: fixed;
-  top: 59%;
+  top: 58.2vh;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   height: 40px;
@@ -238,21 +238,11 @@ nav .cv:hover {
   width: 100%;
   object-fit: cover;
 }
-.profile {
-  height: 35px;
-  width: fit-content;
-  padding: 0px 10px;
-  position: absolute;
-  z-index: 2;
-  border-radius: 100px;
-  top: 14%;
-  left: 31%;
-  transform: translateX(-31%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.hero .profile {
+  position: relative;
 }
-.profile span {
+.hero .profile #profile {
   background: linear-gradient(
     to right,
     rgb(184, 21, 184),
@@ -262,13 +252,17 @@ nav .cv:hover {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-size: 2rem;
+  font-size: 2.5vw;
   font-weight: bolder;
   display: inline-block;
+  position: absolute;
+  z-index: 2;
+  top: 2vw;
+  left: -23.7vw;
+  white-space: nowrap;
 }
-
 .hero .one {
-  margin-top: 4rem;
+  margin-top: 4vw;
   display: flex;
   align-items: center;
 }
@@ -277,9 +271,9 @@ nav .cv:hover {
   font-size: 10vw;
   line-height: 1;
 }
-.hero span {
-  height: 50px;
-  width: 50px;
+.hero #circle {
+  height: 4vw;
+  width: 4vw;
   background-color: var(--primary-color);
   border-radius: 100px;
   margin: 20px;
@@ -339,7 +333,7 @@ nav .cv:hover {
 }
 .about {
   border-top: 1px solid #fff;
-  min-height: 130vh;
+  height: 120vh;
   width: 100vw;
   background-color: var(--primary-color);
 }
@@ -379,8 +373,11 @@ nav .cv:hover {
 .about-text {
   padding-bottom: 2vw;
 }
+.about p img{
+  width: 2vw;
+}
 .about p .para-bg {
-  height: 55px;
+  height: 4vw;
   width: 220px;
   background: url("./assets/para-bg.gif");
   background-position: 50% 100%;
@@ -420,6 +417,7 @@ nav .cv:hover {
   height: 3px;
   width: 100%;
   background-color: #000;
+  border-radius: 20px;
   bottom: 0;
   left: 0;
   transform: scaleX(0);
@@ -437,7 +435,7 @@ nav .cv:hover {
   width: 100vw;
 }
 .about .skills {
-  height: 6vw;
+  min-height: 40vh;
   width: 50vw;
   display: flex;
   align-items: center;
@@ -446,7 +444,7 @@ nav .cv:hover {
   gap: 3vw;
 }
 .about .skills img {
-  height: 100px;
+  height: 15vh;
   padding-top: 0.5vw;
 }
 .about .skills .html {
@@ -462,7 +460,7 @@ nav .cv:hover {
 }
 .about .skills .html .tooltip {
   position: absolute;
-  top: -25%;
+  top: -2.5vw;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(146, 136, 136, 0.384);
@@ -479,19 +477,19 @@ nav .cv:hover {
   position: absolute;
   width: 0px;
   height: 0px;
-  border-top: 10px solid rgba(146, 136, 136, 0.384);
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid transparent;
-  bottom: -70%;
-  left: 38%;
+  border-top: 1vw solid rgba(146, 136, 136, 0.384);
+  border-right: 1vw solid transparent;
+  border-bottom: 1vw solid transparent;
+  border-left: 1vw solid transparent;
+  bottom: -1.9vw;
+  left: 2vw;
 }
 .about .skills .css {
   position: relative;
 }
 .about .skills .css .tooltip {
   position: absolute;
-  top: -25%;
+  top: -2.5vw;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(146, 136, 136, 0.384);
@@ -508,11 +506,11 @@ nav .cv:hover {
   position: absolute;
   width: 0px;
   height: 0px;
-  border-top: 10px solid rgba(146, 136, 136, 0.384);
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid transparent;
-  bottom: -70%;
+  border-top: 1vw solid rgba(146, 136, 136, 0.384);
+  border-right: 1vw solid transparent;
+  border-bottom: 1vw solid transparent;
+  border-left: 1vw solid transparent;
+  bottom: -1.9vw;
   left: 38%;
 }
 .about .skills .js {
@@ -520,7 +518,7 @@ nav .cv:hover {
 }
 .about .skills .js .tooltip {
   position: absolute;
-  top: -25%;
+   top: -2.5vw;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(146, 136, 136, 0.384);
@@ -537,11 +535,11 @@ nav .cv:hover {
   position: absolute;
   width: 0px;
   height: 0px;
-  border-top: 10px solid rgba(146, 136, 136, 0.384);
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid transparent;
-  bottom: -70%;
+  border-top: 1vw solid rgba(146, 136, 136, 0.384);
+  border-right: 1vw solid transparent;
+  border-bottom: 1vw solid transparent;
+  border-left: 1vw solid transparent;
+  bottom: -1.9vw;
   left: 38%;
 }
 .about .skills .tailwind {
@@ -549,7 +547,7 @@ nav .cv:hover {
 }
 .about .skills .tailwind .tooltip {
   position: absolute;
-  top: -25%;
+  top: -2.5vw;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(146, 136, 136, 0.384);
@@ -566,11 +564,11 @@ nav .cv:hover {
   position: absolute;
   width: 0px;
   height: 0px;
-  border-top: 10px solid rgba(146, 136, 136, 0.384);
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid transparent;
-  bottom: -70%;
+  border-top: 1vw solid rgba(146, 136, 136, 0.384);
+  border-right: 1vw solid transparent;
+  border-bottom: 1vw solid transparent;
+  border-left: 1vw solid transparent;
+  bottom: -1.9vw;
   left: 38%;
 }
 .about .skills .react {
@@ -578,7 +576,7 @@ nav .cv:hover {
 }
 .about .skills .react .tooltip {
   position: absolute;
-  top: -25%;
+  top: -2.5vw;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(146, 136, 136, 0.384);
@@ -595,11 +593,11 @@ nav .cv:hover {
   position: absolute;
   width: 0px;
   height: 0px;
-  border-top: 10px solid rgba(146, 136, 136, 0.384);
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid transparent;
-  bottom: -70%;
+  border-top: 1vw solid rgba(146, 136, 136, 0.384);
+  border-right: 1vw solid transparent;
+  border-bottom: 1vw solid transparent;
+  border-left: 1vw solid transparent;
+  bottom: -1.9vw;
   left: 38%;
 }
 .about .skills .redux {
@@ -607,7 +605,7 @@ nav .cv:hover {
 }
 .about .skills .redux .tooltip {
   position: absolute;
-  top: -25%;
+ top: -2.5vw;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(146, 136, 136, 0.384);
@@ -624,11 +622,11 @@ nav .cv:hover {
   position: absolute;
   width: 0px;
   height: 0px;
-  border-top: 10px solid rgba(146, 136, 136, 0.384);
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid transparent;
-  bottom: -70%;
+  border-top: 1vw solid rgba(146, 136, 136, 0.384);
+  border-right: 1vw solid transparent;
+  border-bottom: 1vw solid transparent;
+  border-left: 1vw solid transparent;
+  bottom: -1.9vw;
   left: 38%;
 }
 .about .skills .next {
@@ -636,7 +634,7 @@ nav .cv:hover {
 }
 .about .skills .next .tooltip {
   position: absolute;
-  top: -30%;
+  top: -2.5vw;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(146, 136, 136, 0.384);
@@ -653,11 +651,11 @@ nav .cv:hover {
   position: absolute;
   width: 0px;
   height: 0px;
-  border-top: 10px solid rgba(146, 136, 136, 0.384);
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid transparent;
-  bottom: -70%;
+  border-top: 1vw solid rgba(146, 136, 136, 0.384);
+  border-right: 1vw solid transparent;
+  border-bottom: 1vw solid transparent;
+  border-left: 1vw solid transparent;
+  bottom: -1.9vw;
   left: 38%;
 }
 .about .skills .gsap {
@@ -665,7 +663,7 @@ nav .cv:hover {
 }
 .about .skills .gsap .tooltip {
   position: absolute;
-  top: -25%;
+  top: -2.5vw;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(146, 136, 136, 0.384);
@@ -682,11 +680,11 @@ nav .cv:hover {
   position: absolute;
   width: 0px;
   height: 0px;
-  border-top: 10px solid rgba(146, 136, 136, 0.384);
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid transparent;
-  bottom: -70%;
+   border-top: 1vw solid rgba(146, 136, 136, 0.384);
+  border-right: 1vw solid transparent;
+  border-bottom: 1vw solid transparent;
+  border-left: 1vw solid transparent;
+  bottom: -1.9vw;
   left: 38%;
 }
 .about .skills .git {
@@ -694,7 +692,7 @@ nav .cv:hover {
 }
 .about .skills .git .tooltip {
   position: absolute;
-  top: -25%;
+  top: -2.5vw;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(146, 136, 136, 0.384);
@@ -711,10 +709,10 @@ nav .cv:hover {
   position: absolute;
   width: 0px;
   height: 0px;
-  border-top: 10px solid rgba(146, 136, 136, 0.384);
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid transparent;
-  bottom: -70%;
+  border-top: 1vw solid rgba(146, 136, 136, 0.384);
+  border-right: 1vw solid transparent;
+  border-bottom: 1vw solid transparent;
+  border-left: 1vw solid transparent;
+  bottom: -1.9vw;
   left: 38%;
 }
