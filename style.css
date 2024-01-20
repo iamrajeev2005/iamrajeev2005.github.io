@@ -2,6 +2,10 @@
   font-family: Nu;
   src: url(./assets/NeueMontreal-Regular.otf);
 }
+@font-face {
+  font-family: Clash;
+  src: url(./assets/ClashGrotesk-Medium.ttf);
+}
 :root {
   --primary-color: #fff;
   --secondary-color: #000;
@@ -24,7 +28,7 @@ body {
 }
 .main {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .cursor {
   height: 20px;
@@ -39,6 +43,7 @@ body {
   pointer-events: none;
 }
 nav {
+  cursor: pointer;
   position: fixed;
   height: 3.5vw;
   left: 50%;
@@ -55,6 +60,7 @@ nav {
   z-index: 7;
 }
 nav a {
+  cursor: pointer;
   text-decoration: none;
   color: var(--secondary-color);
   font-size: 1.4vw;
@@ -70,7 +76,7 @@ nav .cv {
   border-radius: 100px;
   border: 0;
   outline: 0;
-  margin-right: -20px;
+  margin-right: -22px;
   font-weight: lighter;
   transition: background 0.6s ease-out;
 }
@@ -104,12 +110,14 @@ nav .cv:hover {
 .social .linkedin i {
   font-size: 1.4em;
   padding-left: 8px;
+  cursor: pointer;
 }
 .social .linkedin a {
   text-decoration: underline;
   color: var(--primary-color);
   margin-left: 11px;
   visibility: hidden;
+  cursor: pointer;
 }
 .social .linkedin:hover {
   cursor: pointer;
@@ -136,12 +144,14 @@ nav .cv:hover {
 .social .twitter i {
   font-size: 1.4em;
   padding-left: 8px;
+  cursor: pointer;
 }
 .social .twitter a {
   text-decoration: underline;
   color: var(--primary-color);
   margin-left: 11px;
   visibility: hidden;
+  cursor: pointer;
 }
 .social .twitter:hover {
   cursor: pointer;
@@ -168,12 +178,14 @@ nav .cv:hover {
 .social .github i {
   font-size: 1.4em;
   padding-left: 8px;
+  cursor: pointer;
 }
 .social .github a {
   text-decoration: underline;
   color: var(--primary-color);
   margin-left: 11px;
   visibility: hidden;
+  cursor: pointer;
 }
 .social .github:hover {
   cursor: pointer;
@@ -200,12 +212,14 @@ nav .cv:hover {
 .social .gmail i {
   font-size: 1.4em;
   padding-left: 8px;
+  cursor: pointer;
 }
 .social .gmail a {
   text-decoration: underline;
   color: var(--primary-color);
   margin-left: 11px;
   visibility: hidden;
+  cursor: pointer;
 }
 .social .gmail:hover {
   cursor: pointer;
@@ -333,7 +347,7 @@ nav .cv:hover {
 }
 .about {
   border-top: 1px solid #fff;
-  height: 120vh;
+  height: fit-content;
   width: 100vw;
   background-color: var(--primary-color);
 }
@@ -436,7 +450,7 @@ nav .cv:hover {
 }
 .about .skills {
   min-height: 40vh;
-  width: 50vw;
+  width: 60vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -444,7 +458,7 @@ nav .cv:hover {
   gap: 3vw;
 }
 .about .skills img {
-  height: 15vh;
+  width: 8vw;
   padding-top: 0.5vw;
 }
 .about .skills .html {
@@ -715,4 +729,67 @@ nav .cv:hover {
   border-left: 1vw solid transparent;
   bottom: -1.9vw;
   left: 38%;
+}
+.services{
+  padding-top: 4vw;
+  height: fit-content;
+  width: 100vw;
+  background-color: #fff;
+}
+.services .upper-text {
+  padding: 0vw 5vw;
+  margin-top: 3.5vw;
+}
+.services .upper-text h4 {
+  font-size: 2vw;
+  font-family: Nu;
+  font-weight: normal;
+}
+.services .border-div {
+  height: 2px;
+  width: 90.5%;
+  background-color: #000;
+  margin: 5px auto;
+}
+.services .hover-texts{
+  padding: 4vw 0vw 0vw 4vw;
+}
+.services .hover-texts .hover-top{
+  width: fit-content;
+}
+.services .hover-texts span{
+  display: inline-block;
+  font-size: 10vw;
+  font-family: Clash;
+  letter-spacing: -3px;
+  transition: transform ease .6s;
+}
+.services .hover-texts h1{
+  font-size: 10vw;
+  font-family: Clash;
+  letter-spacing: -3px;
+  font-weight: normal;
+  line-height: 1;
+  margin-top: -3vw;
+}
+.services .hover-texts1{
+  padding: 4vw 4vw 0vw 0vw;
+  text-align: right;
+  max-width: fit-content;
+  margin-left: 37vw;
+}
+.services .hover-texts1 span{
+  display: inline-block;
+  font-size: 10vw;
+  font-family: Clash;
+  letter-spacing: -3px;
+  transition: transform ease .6s;
+}
+.services .hover-texts1 h1{
+  font-size: 10vw;
+  font-family: Clash;
+  letter-spacing: -3px;
+  font-weight: normal;
+  line-height: 1;
+  margin-top: -3vw;
 }
