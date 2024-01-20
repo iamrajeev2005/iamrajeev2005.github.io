@@ -50,7 +50,8 @@ function cursorAnim() {
 }
 
 function servicePageAnim(){
-  const servicePage = document.querySelector(".services");
+const servicePage = document.querySelector(".services");
+const aboutPage = document.querySelector(".about");
 const hoverText = document.querySelector(".services .hover-texts .hover-top");
 const hoverText1 = document.querySelector(
   ".services .hover-texts1 .hover-top1"
@@ -108,6 +109,7 @@ const eightWord1 = document.querySelector(
 
 hoverText.addEventListener("mouseenter", () => {
   servicePage.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+  aboutPage.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
   hoverText.style.color = "White";
   firstWord.style.transform = "translate(-6vw,-6vw) rotate(-10deg)";
   secondWord.style.transform = "translate(-2vw,-3vw) rotate(-10deg)";
@@ -120,6 +122,7 @@ hoverText.addEventListener("mouseenter", () => {
 });
 hoverText.addEventListener("mouseleave", () => {
   servicePage.style.backgroundColor = "white";
+  aboutPage.style.backgroundColor = "white";
   hoverText.style.color = "Black";
   firstWord.style.transform = "translate(0vw,0vw) rotate(0deg)";
   secondWord.style.transform = "translate(0vw,0vw) rotate(0deg)";
@@ -132,6 +135,7 @@ hoverText.addEventListener("mouseleave", () => {
 });
 hoverText1.addEventListener("mouseenter", () => {
   servicePage.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+  aboutPage.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
   hoverText1.style.color = "White";
   firstWord1.style.transform = "translate(-6vw,-6vw) rotate(-10deg)";
   secondWord1.style.transform = "translate(-2vw,-3vw) rotate(-10deg)";
@@ -144,6 +148,7 @@ hoverText1.addEventListener("mouseenter", () => {
 });
 hoverText1.addEventListener("mouseleave", () => {
   servicePage.style.backgroundColor = "white";
+  aboutPage.style.backgroundColor = "white";
   hoverText1.style.color = "Black";
   firstWord1.style.transform = "translate(0vw,0vw) rotate(0deg)";
   secondWord1.style.transform = "translate(0vw,0vw) rotate(0deg)";
