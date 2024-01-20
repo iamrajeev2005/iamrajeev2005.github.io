@@ -362,7 +362,7 @@ nav a.active::after {
   }
 }
 .about {
-  border-top: 1px solid #fff;
+  border-top: 1px solid var(--primary-color);
   height: fit-content;
   width: 100vw;
   background-color: var(--primary-color);
@@ -382,7 +382,7 @@ nav a.active::after {
 .about .border-div {
   height: 2px;
   width: 90.5%;
-  background-color: #000;
+  background-color: var(--secondary-color);
   margin: 5px auto;
 }
 .about p {
@@ -397,7 +397,7 @@ nav a.active::after {
   display: inline-block;
   height: 3px;
   width: 100px;
-  background-color: #000;
+  background-color: var(--secondary-color);
   margin: 0.8vw 0.5vw;
 }
 .about-text {
@@ -446,7 +446,7 @@ nav a.active::after {
   position: absolute;
   height: 3px;
   width: 100%;
-  background-color: #000;
+  background-color: var(--secondary-color);
   border-radius: 20px;
   bottom: 0;
   left: 0;
@@ -749,7 +749,7 @@ nav a.active::after {
   padding-top: 4vw;
   height: fit-content;
   width: 100vw;
-  background-color: #fff;
+  background-color: var(--primary-color);
 }
 .services .upper-text {
   padding: 0vw 5vw;
@@ -763,7 +763,7 @@ nav a.active::after {
 .services .border-div {
   height: 2px;
   width: 90.5%;
-  background-color: #000;
+  background-color: var(--secondary-color);
   margin: 5px auto;
 }
 .services .hover-texts {
@@ -811,8 +811,8 @@ nav a.active::after {
 .projects {
   min-height: 100vh;
   width: 100vw;
-  background-color: #fff;
-  border-top: 0.1px solid #fff;
+  background-color: var(--primary-color);
+  border-top: 0.1px solid var(--primary-color);
 }
 .projects .upper-text {
   display: flex;
@@ -829,7 +829,7 @@ nav a.active::after {
 .projects .border-div {
   height: 2px;
   width: 90.5%;
-  background-color: #000;
+  background-color: var(--secondary-color);
   margin: 5px auto;
 }
 .projects h1 {
@@ -939,11 +939,11 @@ nav a.active::after {
 }
 .projects .project-btn button:hover {
   width: 30vw;
-  color: #fff;
+  color: var(--primary-color);
 }
 .projects .project-btn button:hover svg {
-  fill: #fff;
-  stroke: #fff;
+  fill: var(--primary-color);
+  stroke: var(--primary-color);
   stroke-width: 1.5;
 }
 .projects .project-btn button:hover svg {
@@ -954,7 +954,7 @@ nav a.active::after {
   content: "";
   height: 100%;
   width: 100%;
-  background-color: #000;
+  background-color: var(--secondary-color);
   bottom: -100%;
   left: 0;
   border-radius: 50%;
@@ -967,10 +967,10 @@ nav a.active::after {
   border-radius: 0;
 }
 .contact {
-  border-top: 0.1px solid #fff;
+  border-top: 0.1px solid var(--primary-color);
   min-height: 100vh;
   width: 100vw;
-  background-color: #fff;
+  background-color: var(--primary-color);
 }
 .contact .upper-text {
   padding: 0vw 5vw;
@@ -984,7 +984,7 @@ nav a.active::after {
 .contact .border-div {
   height: 2px;
   width: 90.5%;
-  background-color: #000;
+  background-color: var(--secondary-color);
   margin: 5px auto;
 }
 .contact .contact-texts {
@@ -1005,7 +1005,7 @@ nav a.active::after {
   font-family: Clash;
 }
 .contact .contact-texts a {
-  color: #000;
+  color: var(--secondary-color);
   text-decoration: none;
   position: relative;
 }
@@ -1023,7 +1023,7 @@ nav a.active::after {
   left: 0;
   transform: scaleX(0);
   transform-origin: bottom right;
-  background-color: #000;
+  background-color: var(--secondary-color);
   transition: transform ease 0.6s;
 }
 .contact .contact-texts a:hover::after {
@@ -1033,7 +1033,7 @@ nav a.active::after {
 footer {
   height: 70vh;
   width: 100vw;
-  background-color: #000;
+  background-color: var(--secondary-color);
   display: flex;
   align-items: center;
   justify-content: center;
