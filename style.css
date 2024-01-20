@@ -20,6 +20,7 @@
   box-sizing: border-box;
   font-family: "Gilroy";
   cursor: none;
+  scroll-behavior: smooth;
 }
 html,
 body {
@@ -65,8 +66,8 @@ nav a {
   color: var(--secondary-color);
   font-size: 1.4vw;
   font-weight: bold;
+  position: relative;
 }
-
 nav .cv {
   cursor: pointer;
   font-size: 1vw;
@@ -87,6 +88,21 @@ nav .cv:hover {
     rgb(16, 113, 204),
     rgb(15, 236, 163)
   );
+}
+nav a.active::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  border-radius: 100px;
+  background: linear-gradient(
+    to right,
+    rgb(184, 21, 184),
+    rgb(16, 113, 204),
+    rgb(15, 236, 163)
+  );
+  bottom: -.2vw;
+  left: 0;
 }
 
 .social {
@@ -299,7 +315,7 @@ nav .cv:hover {
   );
   box-shadow: 1px 1px 40px 10px rgb(209, 61, 209);
   animation: rotate 1.6s infinite linear;
-  transition: scale .4s ease-in-out, transform .4s ease;
+  transition: scale 0.4s ease-in-out, transform 0.4s ease;
 }
 
 @keyframes rotate {
@@ -387,7 +403,7 @@ nav .cv:hover {
 .about-text {
   padding-bottom: 2vw;
 }
-.about p img{
+.about p img {
   width: 2vw;
 }
 .about p .para-bg {
@@ -531,7 +547,7 @@ nav .cv:hover {
 }
 .about .skills .js .tooltip {
   position: absolute;
-   top: -2.5vw;
+  top: -2.5vw;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(146, 136, 136, 0.384);
@@ -618,7 +634,7 @@ nav .cv:hover {
 }
 .about .skills .redux .tooltip {
   position: absolute;
- top: -2.5vw;
+  top: -2.5vw;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(146, 136, 136, 0.384);
@@ -693,7 +709,7 @@ nav .cv:hover {
   position: absolute;
   width: 0px;
   height: 0px;
-   border-top: 1vw solid rgba(146, 136, 136, 0.384);
+  border-top: 1vw solid rgba(146, 136, 136, 0.384);
   border-right: 1vw solid transparent;
   border-bottom: 1vw solid transparent;
   border-left: 1vw solid transparent;
@@ -729,7 +745,7 @@ nav .cv:hover {
   bottom: -1.9vw;
   left: 38%;
 }
-.services{
+.services {
   padding-top: 4vw;
   height: fit-content;
   width: 100vw;
@@ -750,20 +766,20 @@ nav .cv:hover {
   background-color: #000;
   margin: 5px auto;
 }
-.services .hover-texts{
+.services .hover-texts {
   padding: 4vw 0vw 0vw 4vw;
 }
-.services .hover-texts .hover-top{
+.services .hover-texts .hover-top {
   width: fit-content;
 }
-.services .hover-texts span{
+.services .hover-texts span {
   display: inline-block;
   font-size: 10vw;
   font-family: Clash;
   letter-spacing: -3px;
-  transition: transform ease .6s;
+  transition: transform ease 0.6s;
 }
-.services .hover-texts h1{
+.services .hover-texts h1 {
   font-size: 10vw;
   font-family: Clash;
   letter-spacing: -3px;
@@ -771,20 +787,20 @@ nav .cv:hover {
   line-height: 1;
   margin-top: -3vw;
 }
-.services .hover-texts1{
+.services .hover-texts1 {
   padding: 4vw 4vw 0vw 0vw;
   text-align: right;
   max-width: fit-content;
   margin-left: 37vw;
 }
-.services .hover-texts1 span{
+.services .hover-texts1 span {
   display: inline-block;
   font-size: 10vw;
   font-family: Clash;
   letter-spacing: -3px;
-  transition: transform ease .6s;
+  transition: transform ease 0.6s;
 }
-.services .hover-texts1 h1{
+.services .hover-texts1 h1 {
   font-size: 10vw;
   font-family: Clash;
   letter-spacing: -3px;
@@ -792,11 +808,11 @@ nav .cv:hover {
   line-height: 1;
   margin-top: -3vw;
 }
-.projects{
+.projects {
   min-height: 100vh;
   width: 100vw;
   background-color: #fff;
-  border-top: .1px solid #fff;
+  border-top: 0.1px solid #fff;
 }
 .projects .upper-text {
   display: flex;
@@ -816,13 +832,13 @@ nav .cv:hover {
   background-color: #000;
   margin: 5px auto;
 }
-.projects h1{
+.projects h1 {
   font-family: Clash;
   font-size: 10vw;
   font-weight: normal;
   padding: 2vw 0vw 2vw 5vw;
 }
-.projects .projects-container .project{
+.projects .projects-container .project {
   height: 80vh;
   width: 100vw;
   padding: 2vw 5vw;
@@ -830,36 +846,36 @@ nav .cv:hover {
   align-items: center;
   justify-content: space-between;
 }
-.projects .projects-container .project .left{
+.projects .projects-container .project .left {
   height: 100%;
   width: 60%;
-  background-color: #E8E8E8;
+  background-color: #e8e8e8;
   border-radius: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.projects .projects-container .project .left:hover .video{
+.projects .projects-container .project .left:hover .video {
   transform: scale(1.1);
 }
-.projects .projects-container .project .left .video{
+.projects .projects-container .project .left .video {
   background-color: red;
   height: 50%;
-  transition: transform ease .4s;
+  transition: transform ease 0.4s;
   width: 55%;
   border-radius: 30px;
 }
-.projects .projects-container .project .right{
+.projects .projects-container .project .right {
   width: 40%;
   padding-left: 4vw;
   padding-top: 5vw;
 }
-.projects .projects-container .project .right .buttons{
+.projects .projects-container .project .right .buttons {
   display: flex;
   align-items: center;
   gap: 2vw;
 }
-.projects .projects-container .project .right button{
+.projects .projects-container .project .right button {
   border: 1px solid black;
   width: 11vw;
   border-radius: 100px;
@@ -870,39 +886,38 @@ nav .cv:hover {
   white-space: nowrap;
   display: flex;
   align-items: center;
-  gap: .5vw;
-  transition: width .4s ease;
+  gap: 0.5vw;
+  transition: width 0.4s ease;
 }
-.projects .projects-container .project .right button:hover{
-width: 14vw;
+.projects .projects-container .project .right button:hover {
+  width: 14vw;
 }
-.projects .projects-container .project .right button svg{
+.projects .projects-container .project .right button svg {
   display: none;
 }
-.projects .projects-container .project .right button:hover svg{
-display: block;
-
+.projects .projects-container .project .right button:hover svg {
+  display: block;
 }
 
-.projects .projects-container .project .right h3{
+.projects .projects-container .project .right h3 {
   font-family: Clash;
   font-size: 4vw;
   font-weight: normal;
   padding-top: 1vw;
 }
-.projects .projects-container .project .right h5{
+.projects .projects-container .project .right h5 {
   font-family: Clash;
   font-size: 2vw;
   font-weight: normal;
   color: rgb(43, 43, 43);
 }
-.projects .project-btn{
+.projects .project-btn {
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: center;
   padding: 2vw 0vw;
 }
-.projects .project-btn button{
+.projects .project-btn button {
   width: 27vw;
   padding: 1.5vw 3vw;
   border-radius: 100px;
@@ -913,46 +928,46 @@ display: block;
   font-family: Clash;
   font-weight: normal;
   gap: 1vw;
-  transition: width ease .4s;
+  transition: width ease 0.4s;
   white-space: nowrap;
   position: relative;
   overflow: hidden;
   z-index: 1;
 }
-.projects .project-btn button svg{
+.projects .project-btn button svg {
   display: none;
 }
-.projects .project-btn button:hover{
+.projects .project-btn button:hover {
   width: 30vw;
   color: #fff;
 }
-.projects .project-btn button:hover svg{
+.projects .project-btn button:hover svg {
   fill: #fff;
   stroke: #fff;
   stroke-width: 1.5;
 }
-.projects .project-btn button:hover svg{
+.projects .project-btn button:hover svg {
   display: block;
 }
-.projects .project-btn button::after{
+.projects .project-btn button::after {
   position: absolute;
-  content: '';
+  content: "";
   height: 100%;
   width: 100%;
   background-color: #000;
   bottom: -100%;
   left: 0;
   border-radius: 50%;
-  transition: all ease .4s;
+  transition: all ease 0.4s;
   z-index: -1;
 }
-.projects .project-btn button:hover::after{
+.projects .project-btn button:hover::after {
   bottom: 0;
   left: 0;
   border-radius: 0;
 }
-.contact{
-  border-top: .1px solid #fff;
+.contact {
+  border-top: 0.1px solid #fff;
   min-height: 100vh;
   width: 100vw;
   background-color: #fff;
@@ -972,7 +987,7 @@ display: block;
   background-color: #000;
   margin: 5px auto;
 }
-.contact .contact-texts{
+.contact .contact-texts {
   margin: 10vw auto;
   display: flex;
   align-items: center;
@@ -981,26 +996,26 @@ display: block;
   gap: 2vw;
   line-height: 1;
 }
-.contact .contact-texts h4{
+.contact .contact-texts h4 {
   font-size: 1.7vw;
   font-weight: lighter;
 }
-.contact .contact-texts h1{
+.contact .contact-texts h1 {
   font-size: 14vw;
   font-family: Clash;
 }
-.contact .contact-texts a{
+.contact .contact-texts a {
   color: #000;
   text-decoration: none;
   position: relative;
 }
-.contact .contact-texts h2{
+.contact .contact-texts h2 {
   font-size: 9vw;
   font-weight: normal;
   font-family: Clash;
 }
-.contact .contact-texts a::after{
-  content: '';
+.contact .contact-texts a::after {
+  content: "";
   position: absolute;
   height: 5px;
   width: 100%;
@@ -1009,13 +1024,13 @@ display: block;
   transform: scaleX(0);
   transform-origin: bottom right;
   background-color: #000;
-  transition: transform ease .6s;
+  transition: transform ease 0.6s;
 }
-.contact .contact-texts a:hover::after{
+.contact .contact-texts a:hover::after {
   transform-origin: bottom left;
   transform: scaleX(1);
 }
-footer{
+footer {
   height: 70vh;
   width: 100vw;
   background-color: #000;

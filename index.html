@@ -13,59 +13,63 @@
   <body>
     <div class="main">
       <div class="cursor"></div>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
-        <button class="cv">Get Resume</button>
-      </nav>
-      <div class="social">
-        <div class="linkedin">
-          <i class="fa fa-linkedin"></i>
-          <a target="_blank" href="https://www.linkedin.com/in/rajeevkumar2005"
-            >@rajeevkumar2005</a
-          >
+      <section id="home" class="home">
+        <nav>
+          <a href="#home" class="active">Home</a>
+          <a href="#about">About</a> 
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+          <button class="cv">Get Resume</button>
+        </nav>
+        <div class="social">
+          <div class="linkedin">
+            <i class="fa fa-linkedin"></i>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/rajeevkumar2005"
+              >@rajeevkumar2005</a
+            >
+          </div>
+          <div class="twitter">
+            <i class="fa fa-twitter"></i>
+            <a target="_blank" href="https://twitter.com/iamrajeev2005"
+              >@iamrajeev2005</a
+            >
+          </div>
+          <div class="github">
+            <i class="fa fa-github"></i>
+            <a target="_blank" href="https://github.com/iamrajeev2005"
+              >@iamrajeev2005</a
+            >
+          </div>
+          <div class="gmail">
+            <i class="fa fa-google"></i>
+            <a target="_blank" href="https://www.gmail.com"
+              >fea.rajeev@gmail.com</a
+            >
+          </div>
         </div>
-        <div class="twitter">
-          <i class="fa fa-twitter"></i>
-          <a target="_blank" href="https://twitter.com/iamrajeev2005"
-            >@iamrajeev2005</a
-          >
+        <div class="hero">
+          <div class="profile"><span id="profile">Hi! I'm Rajeev</span></div>
+          <div class="video">
+            <video
+              autoplay
+              muted
+              loop
+              src="./assets/Dark Background Web.mp4"
+            ></video>
+          </div>
+          <div class="one">
+            <h1>Front</h1>
+            <span id="circle"></span>
+            <h1>End</h1>
+          </div>
+          <h1>Developer</h1>
+          <h4>Scroll To See More</h4>
         </div>
-        <div class="github">
-          <i class="fa fa-github"></i>
-          <a target="_blank" href="https://github.com/iamrajeev2005"
-            >@iamrajeev2005</a
-          >
-        </div>
-        <div class="gmail">
-          <i class="fa fa-google"></i>
-          <a target="_blank" href="https://www.gmail.com"
-            >fea.rajeev@gmail.com</a
-          >
-        </div>
-      </div>
-      <div class="hero">
-        <div class="profile"><span id="profile">Hi! I'm Rajeev</span></div>
-        <div class="video">
-          <video
-            autoplay
-            muted
-            loop
-            src="./assets/Dark Background Web.mp4"
-          ></video>
-        </div>
-        <div class="one">
-          <h1>Front</h1>
-          <span id="circle"></span>
-          <h1>End</h1>
-        </div>
-        <h1>Developer</h1>
-        <h4>Scroll To See More</h4>
-      </div>
-      <section class="about">
+      </section>
+      <section id="about" class="about">
         <div class="upper-text">
           <h4>ABOUT</h4>
           <h4>
@@ -161,7 +165,7 @@
           </div>
         </div>
       </section>
-      <section class="services">
+      <section id="services" class="services">
         <div class="upper-text">
           <h4>SERVICES</h4>
         </div>
@@ -193,7 +197,7 @@
           <h1>ENGINEERING</h1>
         </div>
       </section>
-      <section class="projects">
+      <section id="projects" class="projects">
         <div class="upper-text">
           <h4>PROJECTS</h4>
           <h4>
@@ -511,7 +515,7 @@
           </button>
         </div>
       </section>
-      <section class="contact">
+      <section id="contact" class="contact">
         <div class="upper-text">
           <h4>CONTACT</h4>
         </div>
@@ -519,7 +523,9 @@
         <div class="contact-texts">
           <h4>WANT TO WORK TOGETHER?</h4>
           <h1>SAY HI!</h1>
-          <a href="mailto:fea.rajeev@gmail.com"><h2>fea.rajeev@gmail.com</h2></a>
+          <a href="mailto:fea.rajeev@gmail.com"
+            ><h2>fea.rajeev@gmail.com</h2></a
+          >
         </div>
       </section>
       <footer>
