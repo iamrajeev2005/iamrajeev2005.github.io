@@ -1015,4 +1015,11 @@ display: block;
   transform-origin: bottom left;
   transform: scaleX(1);
 }
-
+footer{
+  height: 70vh;
+  width: 100vw;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
