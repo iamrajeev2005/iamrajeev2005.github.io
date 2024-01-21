@@ -8,7 +8,7 @@
 }
 @font-face {
   font-family: Gilroy;
-  src: url(./assets/Gilroy-ExtraBold.otf);
+  src: url(./assets/Gilroy-ExtraBold.ttf);
 }
 :root {
   --primary-color: #fff;
