@@ -286,11 +286,13 @@ function loaderAnim() {
     y: 150 + "%",
     duration: 0.5,
     delay: 1,
+    opacity:0
   });
   tl.to(".loader .box h1", {
     y: -150 + "%",
     duration: .6,
-    delay:.5
+    delay:.5,
+     opacity:1
   });
   tl.from(".loader #one", {
     x: -100,

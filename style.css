@@ -422,6 +422,17 @@ nav a.active::after {
   font-family: Nu;
   font-weight: normal;
 }
+.about .about-box{
+  overflow: hidden;
+  height: 2.4vw;
+}
+.about .about-box h4{
+  transition: transform ease .4s;
+}
+.about .about-box:hover h4{
+  transform: translateY(-100%);
+}
+
 .about .border-div {
   height: 2px;
   width: 90.5%;
@@ -869,6 +880,16 @@ nav a.active::after {
   font-family: Nu;
   font-weight: normal;
 }
+.projects .projects-box{
+  overflow: hidden;
+  height: 2.4vw;
+}
+.projects .projects-box h4{
+  transition: transform ease .4s;
+}
+.projects .projects-box:hover h4{
+  transform: translateY(-100%);
+}
 .projects .border-div {
   height: 2px;
   width: 90.5%;
@@ -982,19 +1003,19 @@ nav a.active::after {
   overflow: hidden;
   z-index: 1;
 }
-.projects .project-btn button svg {
+.projects .project-btn button i {
   display: none;
 }
 .projects .project-btn button:hover {
   width: 30vw;
   color: var(--primary-color);
 }
-.projects .project-btn button:hover svg {
+.projects .project-btn button:hover i {
   fill: var(--primary-color);
   stroke: var(--primary-color);
   stroke-width: 1.5;
 }
-.projects .project-btn button:hover svg {
+.projects .project-btn button:hover i {
   display: block;
 }
 .projects .project-btn button::after {
