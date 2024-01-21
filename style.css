@@ -331,6 +331,7 @@ nav a.active::after {
   font-weight: bolder;
   display: inline-block;
   position: absolute;
+  font-family: Gilroy;
   z-index: 2;
   top: 2vw;
   left: -23.7vw;
