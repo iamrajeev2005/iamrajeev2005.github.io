@@ -25,7 +25,26 @@
 html,
 body {
   height: 100%;
+  position: relative;
   width: 100%;
+}
+.loader{
+  position: fixed;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 55;
+}
+.loader .box {
+  overflow: hidden;
+}
+.loader h1{
+  font-size: 8vw;
+  font-weight: normal;
 }
 .main {
   position: relative;
@@ -42,6 +61,19 @@ body {
   transition: all ease 0.1s;
   z-index: 6;
   pointer-events: none;
+}
+.tag{
+  position: fixed;
+  z-index: 56;
+  padding: 1vw 3vw;
+  mix-blend-mode: difference;
+}
+.tag span{
+  font-size: 1.7vw;
+  font-weight: bold;
+  font-family: Nu;
+  display: inline-block;
+  color: var(--primary-color);
 }
 nav {
   cursor: pointer;
