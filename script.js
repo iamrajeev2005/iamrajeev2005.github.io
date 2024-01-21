@@ -192,9 +192,6 @@ function navAnim() {
   ];
 }
 
-
-
-
 function magneticEffect() {
   const starIcon = document.querySelector(".about .about-text p img");
   const crsr = document.querySelector(".cursor");
@@ -301,6 +298,18 @@ function loaderAnim() {
     opacity: 0,
     display: "none",
   });
+  tl.from(".home nav",{
+    y:-100+"%",
+    opacity:0,
+    duration:.5,
+    delay:-.5
+  })
+  tl.from(".home .hero .full",{
+    y:150+"%",
+    opacity:0,
+    duration:1,
+    delay:-.6
+  })
 }
 
 servicePageAnim();
