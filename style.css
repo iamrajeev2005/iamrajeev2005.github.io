@@ -37,10 +37,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   z-index: 55;
 }
 .loader .box {
   overflow: hidden;
+}
+.loader span{
+  display: inline-block;
+  font-size: 8vw;
+  font-weight: bold;
+  font-family: Nu;
+  display: inline-block;
+  color: var(--primary-color);
 }
 .loader h1{
   font-size: 8vw;
@@ -64,7 +73,7 @@ body {
 }
 .tag{
   position: fixed;
-  z-index: 56;
+  z-index: 10;
   padding: 1vw 3vw;
   mix-blend-mode: difference;
 }
