@@ -167,23 +167,42 @@ hoverText1.addEventListener("mouseleave", () => {
 
 }
 
+function navAnim(){
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("nav a");
+
+  window.onscroll = () => [
+    sections.forEach((sec) => {
+      let top = window.scrollY;
+      let offset = sec.offsetTop - 150;
+      let height = sec.offsetHeight;
+      let id = sec.getAttribute("id");
+      if (top >= offset && top < offset + height) {
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          document
+            .querySelector(`nav a[href*=` + id + `]`)
+            .classList.add("active");
+        });
+      }
+    }),
+  ];
+}
+
 servicePageAnim();
 cursorAnim();
+navAnim();
 
-const sections = document.querySelectorAll("section")
-const navLinks = document.querySelectorAll("nav a")
+const lenis = new Lenis();
 
-window.onscroll = () => [
-  sections.forEach((sec) => {
-    let top = window.scrollY
-    let offset = sec.offsetTop - 150;
-    let height = sec.offsetHeight 
-    let id = sec.getAttribute('id')
-    if(top >= offset && top < offset + height){
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        document.querySelector(`nav a[href*=`+ id +`]`).classList.add('active')
-      })
-    }
-  })
-]
+lenis.on("scroll", (e) => {
+  console.log(e);
+});
+
+lenis.on("scroll", ScrollTrigger.update);
+
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
+});
+
+gsap.ticker.lagSmoothing(0);

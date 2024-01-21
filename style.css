@@ -101,7 +101,7 @@ nav a.active::after {
     rgb(16, 113, 204),
     rgb(15, 236, 163)
   );
-  bottom: -.2vw;
+  bottom: -0.2vw;
   left: 0;
 }
 
@@ -113,7 +113,7 @@ nav a.active::after {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   position: fixed;
-  top: 40vh;
+  top: 268px;
   height: 40px;
   width: 40px;
   background: #007bb5;
@@ -147,7 +147,7 @@ nav a.active::after {
   position: fixed;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  top: 46vh;
+  top: 309px;
   height: 40px;
   width: 40px;
   background: #55acee;
@@ -179,7 +179,7 @@ nav a.active::after {
 }
 .social .github {
   position: fixed;
-  top: 52.2vh;
+  top: 350px;
   height: 40px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -213,7 +213,7 @@ nav a.active::after {
 }
 .social .gmail {
   position: fixed;
-  top: 58.2vh;
+  top: 391px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   height: 40px;
@@ -839,7 +839,7 @@ nav a.active::after {
   padding: 2vw 0vw 2vw 5vw;
 }
 .projects .projects-container .project {
-  height: 80vh;
+  height: 40vw;
   width: 100vw;
   padding: 2vw 5vw;
   display: flex;
@@ -968,7 +968,7 @@ nav a.active::after {
 }
 .contact {
   border-top: 0.1px solid var(--primary-color);
-  min-height: 100vh;
+  min-height: fit-content;
   width: 100vw;
   background-color: var(--primary-color);
 }
@@ -988,12 +988,13 @@ nav a.active::after {
   margin: 5px auto;
 }
 .contact .contact-texts {
-  margin: 10vw auto;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 2vw;
+  padding: 10vw 0vw;
   line-height: 1;
 }
 .contact .contact-texts h4 {
@@ -1031,10 +1032,88 @@ nav a.active::after {
   transform: scaleX(1);
 }
 footer {
-  height: 70vh;
+  height: fit-content;
   width: 100vw;
   background-color: var(--secondary-color);
   display: flex;
   align-items: center;
+  color: var(--primary-color);
+  justify-content: space-between;
+  padding: 1vw 4vw;
+}
+footer h1 {
+  font-family: Nu;
+  font-weight: normal;
+  font-size: 1.4vw;
+}
+footer .atags {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4vw;
+}
+footer .atags a {
+  color: var(--primary-color);
+  text-decoration: none;
+  position: relative;
+}
+footer .atags a::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--primary-color);
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform ease 0.4s;
+}
+footer .atags a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+footer .back-top {
+  color: var(--primary-color);
+  width: 5vw;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  gap: .5vw;
+  padding-right: 4vw;
+}
+footer .back-top a{
+  text-decoration: none;
+}
+footer .back-top h3 {
+  font-family: Nu;
+  white-space: nowrap;
+  font-size: 1.6vw;
+  font-weight: normal;
+  color: var(--primary-color);
+  position: relative;
+}
+footer .back-top h3::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--primary-color);
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform ease 0.4s;
+}
+footer .back-top h3:hover::after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+footer .back-top a i {
+  border-radius: 50%;
+  width: 2vw;
+  height: 2vw;
+  background-color: var(--primary-color);
+  font-size: 1.5vw;
+  color: var(--secondary-color);
 }
