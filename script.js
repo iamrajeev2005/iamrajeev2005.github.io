@@ -23,8 +23,8 @@ function cursorAnim() {
     gsap.to(crsr, {
       x: e.x + "px",
       y: e.y + "px",
-      duration:.2,
-      ease:Expo
+      duration: 0.2,
+      ease: Expo,
     });
   });
   nav.addEventListener("mouseenter", () => {
@@ -280,41 +280,39 @@ function magneticEffectTag() {
   });
 }
 
-
-function loaderAnim(){
-      const tl = gsap.timeline();
-
-      tl.to(".loader .box h1",{
-        y:-150,
-        duration:.5,
-        delay:1,
-      })
-      tl.from(".loader #one",{
-        x:-100,
-        duration:.5,
-        opacity:0
-      })
-      tl.from(".loader #two",{
-        x:100,
-        duration:.5,
-        opacity:0
-      })
-      tl.to(".span-box",{
-        x:-625,
-        y:-370,
-        duration:.7,
-        scale:.25
-      })
-      tl.to(".loader",{
-        opacity:0,
-        display:"none"
-      })
+function loaderAnim() {
+  const tl = gsap.timeline();
+  tl.from(".loader .box h1", {
+    y: 150 + "%",
+    duration: 0.5,
+    delay: 1,
+  });
+  tl.to(".loader .box h1", {
+    y: -150 + "%",
+    duration: .6,
+    delay:.5
+  });
+  tl.from(".loader #one", {
+    x: -100,
+    duration: 0.5,
+    opacity: 0,
+  });
+  tl.from(".loader #two", {
+    x: 100,
+    duration: 0.5,
+    opacity: 0,
+  });
+  tl.to(".span-box", {
+    x: -44 + "vw",
+    y: -26 + "vw",
+    duration: 1,
+    scale: 0.23,
+  });
+  tl.to(".loader", {
+    opacity: 0,
+    display: "none",
+  });
 }
-
-
-
-
-
 
 servicePageAnim();
 cursorAnim();
@@ -323,9 +321,3 @@ lenis();
 magneticEffect();
 magneticEffectTag();
 loaderAnim();
-
-
-
-
-
-

@@ -6,6 +6,10 @@
   font-family: Clash;
   src: url(./assets/ClashGrotesk-Medium.ttf);
 }
+@font-face {
+  font-family: Gilroy;
+  src: url(./assets/Gilroy-ExtraBold.otf);
+}
 :root {
   --primary-color: #fff;
   --secondary-color: #000;
@@ -18,7 +22,7 @@
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
-  font-family: "Gilroy";
+  font-family:Gilroy;
   cursor: none;
   scroll-behavior: smooth;
 }
@@ -905,6 +909,11 @@ nav a.active::after {
   transition: transform ease 0.4s;
   width: 55%;
   border-radius: 30px;
+  overflow: hidden;
+}
+.projects .projects-container .project .left .video video{
+  height: 100%;
+  width: 100%;
 }
 .projects .projects-container .project .right {
   width: 40%;
