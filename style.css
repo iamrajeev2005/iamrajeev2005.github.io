@@ -6,10 +6,6 @@
   font-family: Clash;
   src: url(./assets/ClashGrotesk-Medium.ttf);
 }
-@font-face {
-  font-family: Gilroy;
-  src: url(./assets/Gilroy-ExtraBold.ttf);
-}
 :root {
   --primary-color: #fff;
   --secondary-color: #000;
@@ -22,7 +18,7 @@
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
-  font-family:Gilroy;
+  font-family:Clash;
   cursor: none;
   scroll-behavior: smooth;
 }
@@ -331,7 +327,7 @@ nav a.active::after {
   font-weight: bolder;
   display: inline-block;
   position: absolute;
-  font-family: Gilroy;
+  font-family: Clash;
   z-index: 2;
   top: 2vw;
   left: -23.7vw;
@@ -346,7 +342,7 @@ nav a.active::after {
 .hero h1 {
   font-size: 10vw;
   line-height: 1;
-  font-family: Gilroy;
+  font-family: Clash;
 }
 .hero #circle {
   height: 4vw;
