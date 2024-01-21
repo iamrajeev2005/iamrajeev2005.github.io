@@ -192,21 +192,8 @@ function navAnim() {
   ];
 }
 
-function lenis() {
-  const lenis = new Lenis();
 
-  lenis.on("scroll", (e) => {
-    console.log(e);
-  });
 
-  lenis.on("scroll", ScrollTrigger.update);
-
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-  });
-
-  gsap.ticker.lagSmoothing(0);
-}
 
 function magneticEffect() {
   const starIcon = document.querySelector(".about .about-text p img");
@@ -319,7 +306,6 @@ function loaderAnim() {
 servicePageAnim();
 cursorAnim();
 navAnim();
-lenis();
 magneticEffect();
 magneticEffectTag();
 loaderAnim();
