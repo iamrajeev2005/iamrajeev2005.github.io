@@ -464,7 +464,7 @@ nav a.active::after {
 .about p .para-bg {
   height: 4vw;
   width: 220px;
-  background: url("./assets/para-bg.gif");
+  background: url("https://xgjzloifyvgpbmyonaya.supabase.co/storage/v1/object/public/files/IEM_tfLzSX/original");
   background-position: 50% 100%;
   background-repeat: no-repeat;
   background-size: cover;
