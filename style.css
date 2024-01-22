@@ -436,7 +436,7 @@ nav a.active::after {
 
 .about .border-div {
   height: 2px;
-  width: 90.5%;
+  width: 0;
   background-color: var(--secondary-color);
   margin: 5px auto;
 }
@@ -809,6 +809,7 @@ nav a.active::after {
 .services .upper-text {
   padding: 0vw 5vw;
   margin-top: 3.5vw;
+  overflow: hidden;
 }
 .services .upper-text h4 {
   font-size: 2vw;
@@ -817,7 +818,7 @@ nav a.active::after {
 }
 .services .border-div {
   height: 2px;
-  width: 90.5%;
+  width: 0%;
   background-color: var(--secondary-color);
   margin: 5px auto;
 }
@@ -867,14 +868,14 @@ nav a.active::after {
   min-height: 100vh;
   width: 100vw;
   background-color: var(--primary-color);
-  border-top: 0.1px solid var(--primary-color);
 }
 .projects .upper-text {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0vw 5vw;
-  margin-top: 3.5vw;
+  padding-top: 3.5vw;
+  overflow: hidden;
 }
 .projects .upper-text h4 {
   font-size: 2vw;
@@ -893,7 +894,7 @@ nav a.active::after {
 }
 .projects .border-div {
   height: 2px;
-  width: 90.5%;
+  width: 0%;
   background-color: var(--secondary-color);
   margin: 5px auto;
 }
@@ -1045,6 +1046,7 @@ nav a.active::after {
 .contact .upper-text {
   padding: 0vw 5vw;
   margin-top: 3.5vw;
+  overflow: hidden;
 }
 .contact .upper-text h4 {
   font-size: 2vw;
@@ -1053,7 +1055,7 @@ nav a.active::after {
 }
 .contact .border-div {
   height: 2px;
-  width: 90.5%;
+  width: 0%;
   background-color: var(--secondary-color);
   margin: 5px auto;
 }
@@ -1074,6 +1076,7 @@ nav a.active::after {
 .contact .contact-texts h1 {
   font-size: 14vw;
   font-family: Clash;
+  overflow: hidden;
 }
 .contact .contact-texts a {
   color: var(--secondary-color);

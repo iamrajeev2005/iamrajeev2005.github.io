@@ -9,7 +9,7 @@ function cursorAnim() {
   h1s.forEach((h1) => {
     h1.addEventListener("mouseenter", () => {
       gsap.to(crsr, {
-        scale: 4,
+        scale: 8,
       });
     });
     h1.addEventListener("mouseleave", () => {
@@ -296,12 +296,166 @@ function loaderAnim() {
   })
 }
 
-gsap.to(".about .upper-text h4",{
-  y:100 + "%",
-  scrollTrigger:{
-    
-  }
-})
+function simplePageAnims(){
+  gsap.from("#trans,.about .upper-text .about-box", {
+    y: 100 + "%",
+    duration: 0.3,
+    scrollTrigger: {
+      trigger: "#trans, .about .upper-text .about-box",
+      start: "top 90%",
+      end: "top 75%",
+      // markers:true,
+      scrub: true,
+    },
+  });
+   gsap.to(".about .border-div", {
+     width: 90.5 + "%",
+     duration: 0.3,
+     scrollTrigger: {
+       trigger: ".about .border-div",
+       start: "top 90%",
+       end: "top 75%",
+       // markers:true,
+       scrub: true,
+     },
+   });
+  gsap.from(".about .about-text p", {
+    y: 100 + "%",
+    duration: 1.1,
+    opacity: 0,
+    scrollTrigger: {
+      trigger: ".about .about-text p",
+      start: "top 95%",
+      end: "top 85%",
+      // markers:true,
+      scrub: true,
+    },
+  });
+  gsap.from(".about .skills-container .skills", {
+    duration: 0.7,
+    opacity: 0,
+    scale: 0,
+    scrollTrigger: {
+      trigger: ".about .skills-container .skills",
+      start: "top 95%",
+      end: "top 85%",
+      // markers:true,
+      scrub: true,
+      stagger: 1,
+    },
+  });
+  gsap.from(".services .upper-text h4", {
+    y: 100 + "%",
+    duration: 0.3,
+    scrollTrigger: {
+      trigger: ".services .upper-text h4",
+      start: "top 90%",
+      end: "top 75%",
+      // markers:true,
+      scrub: true,
+    },
+  });
+  gsap.to(".services .border-div", {
+    width: 90.5 + "%",
+    duration: 0.3,
+    scrollTrigger: {
+      trigger: ".services .border-div",
+      start: "top 90%",
+      end: "top 75%",
+      // markers:true,
+      scrub: true,
+    },
+  });
+  gsap.from(".services .hover-texts", {
+    x: -100 + "%",
+    duration: 0.8,
+    scrollTrigger: {
+      trigger: ".services .hover-texts",
+      start: "top 75%",
+      end: "top 55%",
+      // markers:true,
+      scrub: true,
+    },
+  });
+  gsap.from(".services .hover-texts1", {
+    x: 100 + "%",
+    duration: 0.8,
+    scrollTrigger: {
+      trigger: ".services .hover-texts1",
+      start: "top 75%",
+      end: "top 55%",
+      // markers:true,
+      scrub: true,
+    },
+  });
+  gsap.from(".projects .upper-text h4", {
+    y: 100 + "%",
+    duration: 0.3,
+    scrollTrigger: {
+      trigger: ".projects .upper-text h4",
+      start: "top 90%",
+      end: "top 75%",
+      // markers:true,
+      scrub: true,
+    },
+  });
+  gsap.to(".projects .border-div", {
+    width: 90.5 + "%",
+    duration: 0.3,
+    scrollTrigger: {
+      trigger: ".projects .border-div",
+      start: "top 90%",
+      end: "top 75%",
+      // markers:true,
+      scrub: true,
+    },
+  });
+  gsap.from(".projects h1", {
+    x: -100 + "%",
+    duration: 0.8,
+    scrollTrigger: {
+      trigger: ".projects h1",
+      start: "top 75%",
+      end: "top 55%",
+      // markers:true,
+      scrub: true,
+    },
+  });
+  gsap.from(".contact .upper-text h4", {
+    y: 100 + "%",
+    duration: 0.3,
+    scrollTrigger: {
+      trigger: ".contact .upper-text h4",
+      start: "top 90%",
+      end: "top 75%",
+      // markers:true,
+      scrub: true,
+    },
+  });
+  gsap.to(".contact .border-div", {
+    width: 90.5 + "%",
+    duration: 0.3,
+    scrollTrigger: {
+      trigger: ".contact .border-div",
+      start: "top 90%",
+      end: "top 75%",
+      // markers:true,
+      scrub: true,
+    },
+  });
+  gsap.from(".contact .contact-texts h1", {
+    y: 100 + "%",
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: ".contact .contact-texts h1",
+      start: "top 100%",
+      end: "top 85%",
+      // markers: true,
+      scrub: true,
+    },
+  });
+}
+
 
 servicePageAnim();
 cursorAnim();
@@ -309,3 +463,20 @@ navAnim();
 magneticEffect();
 magneticEffectTag();
 loaderAnim();
+simplePageAnims();
+
+
+
+
+const lenis = new Lenis();
+
+lenis.on("scroll", (e) => {
+  console.log(e);
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
