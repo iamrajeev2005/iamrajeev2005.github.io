@@ -321,7 +321,7 @@ function simplePageAnims(){
    });
   gsap.from(".about .about-text p", {
     y: 100 + "%",
-    duration: 1.1,
+    duration: 1.5,
     opacity: 0,
     scrollTrigger: {
       trigger: ".about .about-text p",
@@ -332,7 +332,7 @@ function simplePageAnims(){
     },
   });
   gsap.from(".about .skills-container .skills", {
-    duration: 0.7,
+    duration: 1,
     opacity: 0,
     scale: 0,
     scrollTrigger: {
@@ -368,7 +368,7 @@ function simplePageAnims(){
   });
   gsap.from(".services .hover-texts", {
     x: -100 + "%",
-    duration: 0.8,
+    duration: 1.2,
     scrollTrigger: {
       trigger: ".services .hover-texts",
       start: "top 75%",
@@ -379,7 +379,7 @@ function simplePageAnims(){
   });
   gsap.from(".services .hover-texts1", {
     x: 100 + "%",
-    duration: 0.8,
+    duration: 1.2,
     scrollTrigger: {
       trigger: ".services .hover-texts1",
       start: "top 75%",
@@ -445,7 +445,7 @@ function simplePageAnims(){
   });
   gsap.from(".contact .contact-texts h1", {
     y: 100 + "%",
-    duration: 0.5,
+    duration: .8,
     scrollTrigger: {
       trigger: ".contact .contact-texts h1",
       start: "top 100%",
