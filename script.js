@@ -177,7 +177,7 @@ function navAnim() {
   window.onscroll = () => [
     sections.forEach((sec) => {
       let top = window.scrollY;
-      let offset = sec.offsetTop - 150;
+      let offset = sec.offsetTop - 550;
       let height = sec.offsetHeight;
       let id = sec.getAttribute("id");
       if (top >= offset && top < offset + height) {
@@ -278,22 +278,6 @@ function loaderAnim() {
     delay:.5,
      opacity:1
   });
-  tl.from(".loader #one", {
-    x: -100,
-    duration: 0.5,
-    opacity: 0,
-  });
-  tl.from(".loader #two", {
-    x: 100,
-    duration: 0.5,
-    opacity: 0,
-  });
-  tl.to(".span-box", {
-    x: -44 + "vw",
-    y: -26 + "vw",
-    duration: 1,
-    scale: 0.23,
-  });
   tl.to(".loader", {
     opacity: 0,
     display: "none",
@@ -311,6 +295,13 @@ function loaderAnim() {
     delay:-.6
   })
 }
+
+gsap.to(".about .upper-text h4",{
+  y:100 + "%",
+  scrollTrigger:{
+    
+  }
+})
 
 servicePageAnim();
 cursorAnim();

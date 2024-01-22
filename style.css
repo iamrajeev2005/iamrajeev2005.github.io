@@ -416,6 +416,7 @@ nav a.active::after {
   justify-content: space-between;
   padding: 0vw 5vw;
   margin-top: 3.5vw;
+  overflow: hidden;
 }
 .about .upper-text h4 {
   font-size: 2vw;
