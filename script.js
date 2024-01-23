@@ -319,16 +319,38 @@ function simplePageAnims(){
        scrub: true,
      },
    });
-  gsap.from(".about .about-text p", {
-    y: 100 + "%",
-    duration: 1.5,
-    opacity: 0,
+  gsap.to(".about .about-text p", {
+    backgroundPositionX: "0%",
+    stagger: 1,
     scrollTrigger: {
       trigger: ".about .about-text p",
-      start: "top 95%",
-      end: "top 85%",
-      // markers:true,
-      scrub: true,
+          start: "top 60%",
+          end: "top 30%",
+          scrub:true,
+          // markers:true
+    },
+  });
+  gsap.to(".about .about-text p .line", {
+    width:"100px",
+    duration:1,
+    scrollTrigger: {
+      trigger: ".about .about-text p .line",
+          start: "top 77%",
+          end: "top 70%",
+          scrub:true,
+          // markers:true
+    },
+  });
+  gsap.from(".about .about-text p img", {
+    x:-100,
+    duration:1,
+    opacity:0,
+    scrollTrigger: {
+      trigger: ".about .about-text p img",
+          start: "top 72%",
+          end: "top 68%",
+          scrub:true,
+          // markers:true
     },
   });
   gsap.from(".about .skills-container .skills", {
