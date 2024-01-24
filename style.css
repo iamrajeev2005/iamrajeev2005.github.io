@@ -946,16 +946,17 @@ nav a.active::after {
   transform: scale(1.1);
 }
 .projects .projects-container .project .left .video {
-  background-color: red;
+  /* background-color: red; */
   height: 50%;
   transition: transform ease 0.4s;
-  width: 55%;
+  width: 60%;
   border-radius: 30px;
   overflow: hidden;
 }
 .projects .projects-container .project .left .video video {
   height: 100%;
   width: 100%;
+  object-fit: fill;
 }
 .projects .projects-container .project .right {
   width: 40%;
