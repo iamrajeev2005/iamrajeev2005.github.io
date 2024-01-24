@@ -418,10 +418,17 @@ nav a.active::after {
   margin-top: 3.5vw;
   overflow: hidden;
 }
-.about .upper-text h4 {
+.about .upper-text h4{
   font-size: 2vw;
   font-family: Nu;
   font-weight: normal;
+}
+.about .upper-text h4 a {
+  font-size: 2vw;
+  font-family: Nu;
+  font-weight: normal;
+  text-decoration: none;
+  color: var(--secondary-color);
 }
 .about .about-box {
   overflow: hidden;
@@ -1001,6 +1008,9 @@ nav a.active::after {
   align-items: center;
   justify-content: center;
   padding: 2vw 0vw;
+}
+.projects .project-btn a{
+  text-decoration: none;
 }
 .projects .project-btn button {
   width: 27vw;
