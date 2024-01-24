@@ -279,7 +279,7 @@ function loaderAnim() {
      opacity:1
   });
   tl.to(".loader", {
-    opacity: 0,
+    left:"-100%",
     display: "none",
   });
   tl.from(".home nav",{
