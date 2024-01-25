@@ -418,7 +418,7 @@ nav a.active::after {
   margin-top: 3.5vw;
   overflow: hidden;
 }
-.about .upper-text h4{
+.about .upper-text h4 {
   font-size: 2vw;
   font-family: Nu;
   font-weight: normal;
@@ -447,7 +447,7 @@ nav a.active::after {
   background-color: var(--secondary-color);
   margin: 5px auto;
 }
-.about .about-text{
+.about .about-text {
   width: 88%;
   margin: 3vw auto;
 }
@@ -898,19 +898,26 @@ nav a.active::after {
   padding-top: 3.5vw;
   overflow: hidden;
 }
-.projects .upper-text h4 {
+.projects .upper-text h3 {
   font-size: 2vw;
   font-family: Nu;
   font-weight: normal;
 }
-.projects .projects-box {
+.projects .upper-text .projects-box h3 a {
+  font-size: 2vw;
+  font-family: Nu;
+  font-weight: normal;
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+.projects .upper-text .projects-box {
   overflow: hidden;
   height: 2.4vw;
 }
-.projects .projects-box h4 {
+.projects .upper-text .projects-box h3 {
   transition: transform ease 0.4s;
 }
-.projects .projects-box:hover h4 {
+.projects .upper-text .projects-box:hover h3 {
   transform: translateY(-100%);
 }
 .projects .border-div {
@@ -932,6 +939,10 @@ nav a.active::after {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.projects .projects-container .project a{
+  text-decoration: none;
+  color: var(--secondary-color);
 }
 .projects .projects-container .project .left {
   height: 100%;
@@ -1010,7 +1021,7 @@ nav a.active::after {
   justify-content: center;
   padding: 2vw 0vw;
 }
-.projects .project-btn a{
+.projects .project-btn a {
   text-decoration: none;
 }
 .projects .project-btn button {
