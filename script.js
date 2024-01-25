@@ -353,19 +353,6 @@ function simplePageAnims(){
           // markers:true
     },
   });
-  gsap.from(".about .skills-container .skills", {
-    duration: 1,
-    opacity: 0,
-    scale: 0,
-    scrollTrigger: {
-      trigger: ".about .skills-container .skills",
-      start: "top 95%",
-      end: "top 85%",
-      // markers:true,
-      scrub: true,
-      stagger: 1,
-    },
-  });
   gsap.from(".services .upper-text h4", {
     y: 100 + "%",
     duration: 0.3,
