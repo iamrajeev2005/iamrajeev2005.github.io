@@ -43,14 +43,6 @@ body {
 .loader .box {
   overflow: hidden;
 }
-.loader span {
-  display: inline-block;
-  font-size: 8vw;
-  font-weight: bold;
-  font-family: Nu;
-  display: inline-block;
-  color: var(--primary-color);
-}
 .loader h1 {
   font-size: 8vw;
   font-weight: normal;
@@ -376,6 +368,9 @@ nav a.active::after {
   0% {
     transform: scale(1);
   }
+}
+#hero-btn{
+  display: none;
 }
 .hero h4 {
   bottom: 5%;
@@ -948,7 +943,7 @@ nav a.active::after {
   height: 100%;
   width: 60%;
   background-color: #e8e8e8;
-  border-radius: 30px;
+  border-radius: 2vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -961,7 +956,7 @@ nav a.active::after {
   height: 50%;
   transition: transform ease 0.4s;
   width: 60%;
-  border-radius: 30px;
+  border-radius: 2vw;
   overflow: hidden;
 }
 .projects .projects-container .project .left .video video {
@@ -1225,4 +1220,240 @@ footer .back-top a i {
   background-color: var(--primary-color);
   font-size: 1.5vw;
   color: var(--secondary-color);
+}
+
+
+/* Responsive */
+@media (max-width:600px) {
+  
+.loader h1 {
+  font-size: 12vw;
+}
+  .tag {
+  padding: 5vw 3vw 0vw 3vw;
+  mix-blend-mode: difference;
+}
+.tag span {
+  font-size: 6vw;
+}
+.cursor {
+  display: none;
+}
+nav{
+  display: none;
+}
+.social .linkedin {
+  top: 350px;
+}
+.social .twitter{
+  top: 392px;
+}
+.social .github{
+  top: 433px;
+}
+.social .gmail{
+  top: 473px;
+}
+.hero .profile #profile {
+  font-size: 12vw;
+  top: -15vw;
+  left: -38vw;
+}
+.hero .one {
+  margin-top: 0vw;
+  display: flex;
+  align-items: center;
+}
+.hero h1 {
+  font-size: 15vw;
+}
+.hero h4 {
+  display: none;
+  bottom: 5%;
+  position: absolute;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 100px;
+  font-size: 2vw;
+  padding: 2px 20px;
+  animation: lift 3s infinite linear;
+  z-index: 5;
+}
+#hero-btn{
+  display: block;
+  background-color: transparent;
+  bottom: 5%;
+  border: 1px solid white;
+  position: absolute;
+  color: var(--primary-color);
+  border-radius: 50%;
+  padding: 10px 10px;
+  animation: lift 5s infinite linear;
+  z-index: 5;
+}
+#hero-btn i{
+  font-size: 10vw;
+  font-weight: normal;
+}
+.about{
+  height: fit-content;
+}
+.about .upper-text {
+  padding: 0vw 5vw;
+  margin-top: 3.5vw;
+  overflow: hidden;
+}
+.about .upper-text h4 {
+  font-size: 5vw;
+  font-family: Nu;
+  font-weight: normal;
+}
+.about .upper-text h4 a {
+  font-size: 5vw;
+}
+.about .about-box {
+  overflow: hidden;
+  height: 6.2vw;
+}
+.about .about-box svg{
+  height: 5vw;
+  width: 5vw;
+}
+.about .about-box h4 {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+.about p {
+  font-size: 5vw;
+}
+
+.about p .line {
+  height: 3px;
+  width: 0px;
+  background-color: var(--secondary-color);
+  margin: 0.8vw 0.5vw;
+}
+.about-text {
+  padding-bottom: 2vw;
+}
+.about p img {
+  width: 5vw;
+}
+.about p .para-bg {
+  height: 5vw;
+  width: 100px;
+}
+.about .heading{
+  margin-top: 10vw;
+}
+.about .heading h1 {
+  font-size: 10vw;
+}
+.about .skills-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+.about .skills {
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 7vw;
+}
+.about .skills img {
+  width: 20vw;
+  padding-top: 2vw;
+}
+.services .upper-text h4 {
+  font-size: 5vw;
+}
+.services .upper-text h4 a {
+  font-size: 5vw;
+}
+.services .hover-texts span {
+  font-size: 15vw;
+}
+.services .hover-texts h1 {
+  font-size: 15vw;
+}
+.services .hover-texts1{
+  margin-left: 12vw;
+}
+.services .hover-texts1 span {
+  font-size: 15vw;
+}
+.services .hover-texts1 h1 {
+  font-size: 15vw;
+}
+.projects .upper-text h3 {
+  font-size: 5vw;
+}
+.projects .upper-text .projects-box h3 a {
+  font-size: 5vw;
+}
+.projects .upper-text .projects-box {
+  height: 6.2vw;
+}
+.projects .upper-text .projects-box h3 svg{
+  height: 5vw;
+  width: 5vw;
+}
+.projects .upper-text .projects-box h3 {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+.projects h1 {
+  font-size: 15vw;
+  padding: 2vw 0vw 2vw 5vw;
+}
+.projects .projects-container .project .right button {
+  width: 16vw;
+  font-size: 2.5vw;
+
+}
+.projects .projects-container .project .right button:hover {
+  width: 19vw;
+}
+.projects .projects-container .project .right {
+  padding-left: 2vw;
+  margin-right: 2vw;
+}
+.projects .projects-container .project .right h5 {
+  font-size: 3.5vw;
+}
+.projects .project-btn button {
+  width: 42vw;
+  font-size: 5vw;
+}
+.projects .project-btn{
+  padding-top: 5vw;
+}
+.projects .project-btn button:hover {
+  width: 46vw;
+}
+.contact .upper-text h4 {
+  font-size: 5vw;
+}
+.contact .contact-texts h4 {
+  font-size: 5vw;
+}
+.contact .contact-texts h1 {
+  font-size: 20vw;
+}
+.contact .contact-texts h2 {
+  font-size: 10vw;
+  font-weight: normal;
+  font-family: Clash;
+}
+footer h1 {
+  font-size: 2vw;
+}
+footer .back-top {
+  display: none;
+}
 }
